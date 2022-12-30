@@ -1,0 +1,36 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+td {
+  border-radius: 7px;
+  box-shadow: #1a1e21 0 0 10px;
+  color: whitesmoke;
+}
+
+tbody>:nth-child(1){
+  font-weight: bolder;
+  background-color: #0c63e4 !important;
+}
+
+tbody>:nth-child(odd){
+  background-color: #0dcaf0;
+}
+tbody>:nth-child(even){
+  background-color: #0dcaf0;
+}
