@@ -1,0 +1,13 @@
+﻿<h1>Create a post, any post.</h1>
+<form method="post" enctype="multipart/form-data" asp-controller="steaminput" asp-action="Add">
+
+                <input type="text" id="headerInput" name="header"/>
+                <input type="text" id="shortContentInput" name="shortContent"/>
+                <textarea id="mySchweetMDEMoment" name="longContent"></textarea>
+                <script>let editor = new SimpleMDE({element: document.getElementById("mySchweetMDEMoment"), toolbar:true});</script>
+
+                <div style="display: flex; flex-direction: row; gap: 5px">
+                <input type="submit" class="btn btn-primary">
+                <a href="/steaminput/Index" class="btn btn-secondary">View posts</a>
+                </div>
+</form>

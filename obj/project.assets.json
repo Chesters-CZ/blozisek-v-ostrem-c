@@ -1,11 +1,51 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Markdig/0.30.4": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Markdig.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Markdig.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Markdig/0.30.4": {
+      "sha512": "9LL7Mzubwf6QmOTZIqf+vERiinqPA1H+irBA38POhr93W/it00AvFWaCtF80+8VJTooFmcAJyZT2f60t1f88eQ==",
+      "type": "package",
+      "path": "markdig/0.30.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Markdig.dll",
+        "lib/net452/Markdig.xml",
+        "lib/net6.0/Markdig.dll",
+        "lib/net6.0/Markdig.xml",
+        "lib/netcoreapp3.1/Markdig.dll",
+        "lib/netcoreapp3.1/Markdig.xml",
+        "lib/netstandard2.0/Markdig.dll",
+        "lib/netstandard2.0/Markdig.xml",
+        "lib/netstandard2.1/Markdig.dll",
+        "lib/netstandard2.1/Markdig.xml",
+        "markdig.0.30.4.nupkg.sha512",
+        "markdig.nuspec",
+        "markdig.png",
+        "readme.md"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Markdig >= 0.30.4"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\bezou\\.nuget\\packages\\": {}
@@ -13,11 +53,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\model-view-controler\\model-view-controler.csproj",
-      "projectName": "model-view-controler",
-      "projectPath": "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\model-view-controler\\model-view-controler.csproj",
+      "projectUniqueName": "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\blozisek-v-ostrem-c\\blozisek-v-ostrem-c.csproj",
+      "projectName": "blozisek-v-ostrem-c",
+      "projectPath": "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\blozisek-v-ostrem-c\\blozisek-v-ostrem-c.csproj",
       "packagesPath": "C:\\Users\\bezou\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\model-view-controler\\obj\\",
+      "outputPath": "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\blozisek-v-ostrem-c\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bezou\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,6 +83,12 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "Markdig": {
+            "target": "Package",
+            "version": "[0.30.4, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "model-view-controler", "model-view-controler.csproj", "{607D0CC6-A783-45B8-8691-EBB6D3ADB28E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blozisek-v-ostrem-c", "blozisek-v-ostrem-c.csproj", "{607D0CC6-A783-45B8-8691-EBB6D3ADB28E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

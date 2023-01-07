@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Kr9fFT5Z8mn/oTD7NAedt8AIWu23D+JM1yRoIwFeg3rsi1mu3vMNFtZ8YhnbY2h8jjvOza3HOMoz+ck/v2LxmQ==",
+  "dgSpecHash": "txnYMHWsvc8zMpj06BIBx1WFlELEzBYRkY9+Tee2GlPObwRLV5gv4OFgMlhYu9JfTpUUVHpLDEh4n3nTbeCH5w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\model-view-controler\\model-view-controler.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\blozisek-v-ostrem-c\\blozisek-v-ostrem-c.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\bezou\\.nuget\\packages\\markdig\\0.30.4\\markdig.0.30.4.nupkg.sha512"
+  ],
   "logs": []
 }

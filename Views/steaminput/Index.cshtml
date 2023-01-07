@@ -1,50 +1,82 @@
 ﻿@using model_view_controler.modely
-@model model_view_controler.modely.Prezidentik[];
+@model model_view_controler.modely.BlogPost[];
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
-    Prezidentik[] prezidentiks = Model;
+    BlogPost[] blozisci = Model;
 }
-<div>hello</div>
-<h1>retardů na J je: @ViewData["Jcount"]</h1>
-<h1>libtardů je: @ViewData["libtards"]%</h1>
-<h1>rebtardů je: @ViewData["rebtard"]%</h1>
-<h1>ňů jorkerů je: @ViewData["newyorker"]</h1>
-<table>
-    @foreach (Prezidentik p in prezidentiks)
-    {
-        <tr style="">
-            <td>
-                @p.PresidencyID
-            </td>
-            <td>
-                @p.Name
-            </td>
-            <td>
-                @p.Wikipedia
-            </td>
-            <td>
-                @p.PresidentFrom
-            </td>
-            <td>
-                @p.PresidentTo
-            </td>
-            <td>
-                @p.Party
-            </td>
-            <td>
-                @p.PortraitImage
-            </td>
-            <td>
-                @p.Thumbnail
-            </td>
-            <td>
-                @p.HomeState
-            </td>
-        </tr>
-    }
-</table>
 
-@{
-    
-}
+<div>
+    @if (blozisci != null)
+    {
+        @foreach (BlogPost b in blozisci)
+        {
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@b.PostName</h5>
+                    <p>@b.DatePosted</p>
+                    <p class="card-text">@b.ShortContent</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#@b.ID">
+                        See full post
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="@b.ID" tabindex="-1" aria-labelledby="@b.ID-label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="@b.ID-label">@b.PostName</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>@b.DatePosted</p>
+                            <p class="card-text">@Html.Raw(b.LongContent)</p>
+                        </div>
+                        <div class="modal-footer">
+                            <form method="post" enctype="multipart/form-data" asp-controller="steaminput" asp-action="Delete">
+                                <input type="text" name="postID" value="@b.ID" hidden="hidden">
+                                <input type="submit" class="btn btn-danger" value="Delete" style="align-self: flex-start">
+                            </form>
+                            <button type="button" class="btn btn-secondary" data-bs-target="#@b.ID-edit" data-bs-toggle="modal" data-bs-dismiss="modal">Edit</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="@b.ID-edit" tabindex="-1" aria-labelledby="@b.ID-edit label" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="@b.ID-edit label">Edit</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form method="post" enctype="multipart/form-data" asp-controller="steaminput" asp-action="Index">
+                            <div class="modal-body">
+
+                                <input type="text" id="@b.ID-headerInput" name="header" value="@b.PostName"/>
+                                <input type="text" id="@b.ID-shortContentInput" name="shortContent" value="@b.ShortContent"/>
+                                <input type="text" name="postID" value="@b.ID" hidden="hidden">
+                                <input type="text" name="postDate" value="@b.DatePosted" hidden="hidden">
+                                <textarea id="@b.ID-mde" name="longContent">@b.LongContent</textarea>
+                                <script>let editor_@b.ID = new SimpleMDE({element: document.getElementById("@b.ID-mde"), toolbar:true});</script>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <input type="submit" class="btn btn-primary" value="Done">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+<a type="button" class="btn btn-primary" href="/steaminput/Add">
+    Create new
+</a>

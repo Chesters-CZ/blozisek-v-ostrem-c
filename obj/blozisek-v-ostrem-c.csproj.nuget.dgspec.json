@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\blozisek-v-ostrem-c\\model-view-controler.csproj": {}
+    "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\blozisek-v-ostrem-c\\blozisek-v-ostrem-c.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\blozisek-v-ostrem-c\\model-view-controler.csproj": {
+    "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\blozisek-v-ostrem-c\\blozisek-v-ostrem-c.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\blozisek-v-ostrem-c\\model-view-controler.csproj",
-        "projectName": "model-view-controler",
-        "projectPath": "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\blozisek-v-ostrem-c\\model-view-controler.csproj",
+        "projectUniqueName": "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\blozisek-v-ostrem-c\\blozisek-v-ostrem-c.csproj",
+        "projectName": "blozisek-v-ostrem-c",
+        "projectPath": "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\blozisek-v-ostrem-c\\blozisek-v-ostrem-c.csproj",
         "packagesPath": "C:\\Users\\bezou\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\bezou\\Google Drive\\Educanet\\2022-2023\\Dotnet\\blozisek-v-ostrem-c\\obj\\",
         "projectStyle": "PackageReference",
@@ -37,6 +37,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Markdig": {
+              "target": "Package",
+              "version": "[0.30.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
