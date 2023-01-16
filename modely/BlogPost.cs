@@ -18,15 +18,7 @@ public class BlogPost
         LongContent = longContent;
         ID = id;
     }
-    
-    public BlogPost(string[] inp)
-    {
-        PostName = inp[0];
-        DatePosted = inp[1];
-        ShortContent = inp[2];
-        LongContent = inp[3];
-    }
-    
+
     public BlogPost()
     {
     }

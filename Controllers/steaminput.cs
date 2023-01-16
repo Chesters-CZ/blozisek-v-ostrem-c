@@ -60,6 +60,7 @@ public class steaminput : Controller
             blozisky.Count));
         foreach (BlogPost blozisek in blozisky)
         {
+            
             Console.Write(blozisek.PostName);
             Console.Write(blozisek.DatePosted);
             Console.Write(blozisek.ShortContent);
