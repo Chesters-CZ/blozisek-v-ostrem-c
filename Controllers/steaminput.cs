@@ -14,10 +14,6 @@ public class steaminput : Controller
     // GET
     public IActionResult Index()
     {
-        Console.WriteLine("pindík");
-        ViewData["pyndík"] = "haha penis";
-
-        ViewBag.pytlík = "varle"; // donot.
         try
         {
             string deboska =
